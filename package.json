@@ -1,0 +1,32 @@
+{
+  "name": "@claude-plugins/superpowers-marketplace",
+  "version": "0.1.0",
+  "description": "A marketplace for discovering and installing Claude Code superpowers (plugins)",
+  "type": "module",
+  "bin": {
+    "claude-plugin": "./bin/plugin.js"
+  },
+  "main": "./src/index.js",
+  "exports": {
+    ".": "./src/index.js",
+    "./marketplace": "./src/marketplace.js",
+    "./registry": "./src/registry.js",
+    "./installer": "./src/installer.js"
+  },
+  "scripts": {
+    "test": "node --test src/**/*.test.js",
+    "start": "node bin/plugin.js"
+  },
+  "keywords": [
+    "claude",
+    "claude-code",
+    "plugins",
+    "superpowers",
+    "marketplace"
+  ],
+  "license": "MIT",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "dependencies": {}
+}
