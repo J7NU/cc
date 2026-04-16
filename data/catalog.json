@@ -129,6 +129,19 @@
           "description": "Adds Azure and rollback/canary deployment strategies."
         }
       }
+    },
+    {
+      "name": "frontend-design",
+      "description": "AI-powered UI design assistant: component generation, Tailwind theming, and accessibility audits",
+      "author": "claude-plugins-official",
+      "latest": "1.0.0",
+      "tags": ["frontend", "ui", "design", "tailwind", "accessibility", "components"],
+      "versions": {
+        "1.0.0": {
+          "description": "Generate React/Vue/Svelte components from natural-language descriptions, apply Tailwind themes, and run WCAG accessibility audits.",
+          "activationNote": "Restart Claude Code to enable the frontend-design superpower."
+        }
+      }
     }
   ]
 }

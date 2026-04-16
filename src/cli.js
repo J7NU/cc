@@ -73,13 +73,19 @@ async function cmdInstall(args, marketplace, installer) {
   }
 
   const [nameSpec] = args;
-  const { name, version } = parseNameSpec(nameSpec);
+  const { name, version, author } = parseNameSpec(nameSpec);
 
   console.log(`Searching marketplace for "${name}"...`);
   const entry = await marketplace.find(name);
 
   if (!entry) {
     throw new Error(`Superpower "${name}" not found in the marketplace.`);
+  }
+
+  if (author && entry.author.toLowerCase() !== author.toLowerCase()) {
+    throw new Error(
+      `Superpower "${name}" exists but is published by "${entry.author}", not "${author}".`
+    );
   }
 
   const resolvedVersion = version ?? entry.latest;
@@ -243,10 +249,16 @@ async function cmdUpdate(args, marketplace, installer, registry) {
 }
 
 function parseNameSpec(spec) {
-  // Supports "name", "name@version", "@scope/name", "@scope/name@version"
+  // Supports "name", "name@version", "name@author", "@scope/name", "@scope/name@version"
+  // A qualifier starting with a digit is treated as a version; anything else is an author filter.
   const atVersionIdx = spec.lastIndexOf('@');
   if (atVersionIdx > 0) {
-    return { name: spec.slice(0, atVersionIdx), version: spec.slice(atVersionIdx + 1) };
+    const qualifier = spec.slice(atVersionIdx + 1);
+    const name = spec.slice(0, atVersionIdx);
+    if (/^\d/.test(qualifier)) {
+      return { name, version: qualifier, author: undefined };
+    }
+    return { name, author: qualifier, version: undefined };
   }
-  return { name: spec, version: undefined };
+  return { name: spec, version: undefined, author: undefined };
 }
