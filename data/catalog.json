@@ -1,0 +1,147 @@
+{
+  "superpowers": [
+    {
+      "name": "superpowers",
+      "description": "Official Claude Code superpowers bundle: enhanced reasoning, web search, and code execution",
+      "author": "claude-plugins-official",
+      "latest": "1.0.0",
+      "tags": ["official", "bundle", "reasoning", "search", "execution"],
+      "versions": {
+        "1.0.0": {
+          "description": "Adds enhanced reasoning chains, real-time web search, and sandboxed code execution to Claude Code.",
+          "activationNote": "Restart Claude Code to activate the new superpowers."
+        }
+      }
+    },
+    {
+      "name": "git-tools",
+      "description": "Advanced git operations: interactive rebase, stash manager, and conflict resolver",
+      "author": "claude-plugins-official",
+      "latest": "1.2.0",
+      "tags": ["git", "vcs", "productivity"],
+      "versions": {
+        "1.0.0": {
+          "description": "Basic git helper commands."
+        },
+        "1.1.0": {
+          "description": "Adds stash manager and branch visualizer."
+        },
+        "1.2.0": {
+          "description": "Adds interactive conflict resolver with AI-assisted merge suggestions."
+        }
+      }
+    },
+    {
+      "name": "code-review",
+      "description": "Automated code review with security checks, style enforcement, and complexity metrics",
+      "author": "claude-plugins-official",
+      "latest": "2.0.1",
+      "tags": ["review", "security", "quality"],
+      "versions": {
+        "1.0.0": {
+          "description": "Basic style and lint checks."
+        },
+        "2.0.0": {
+          "description": "Security vulnerability scanning and complexity analysis."
+        },
+        "2.0.1": {
+          "description": "Bug fixes for Python and Go support."
+        }
+      }
+    },
+    {
+      "name": "test-pilot",
+      "description": "AI-generated test suites: unit, integration, and snapshot tests for any language",
+      "author": "claude-plugins-official",
+      "latest": "0.9.0",
+      "tags": ["testing", "tdd", "automation"],
+      "versions": {
+        "0.8.0": {
+          "description": "Unit test generation for JavaScript and TypeScript."
+        },
+        "0.9.0": {
+          "description": "Adds Python, Go, and Rust support plus integration test scaffolding."
+        }
+      }
+    },
+    {
+      "name": "docs-writer",
+      "description": "Generate and maintain project documentation, API references, and changelogs",
+      "author": "claude-plugins-official",
+      "latest": "1.1.0",
+      "tags": ["documentation", "markdown", "api"],
+      "versions": {
+        "1.0.0": {
+          "description": "README and API doc generation."
+        },
+        "1.1.0": {
+          "description": "Adds changelog tracking and JSDoc/TSDoc/OpenAPI support."
+        }
+      }
+    },
+    {
+      "name": "db-assist",
+      "description": "Database schema design, migration generation, and query optimization",
+      "author": "claude-plugins-official",
+      "latest": "1.0.2",
+      "tags": ["database", "sql", "migrations"],
+      "versions": {
+        "1.0.0": {
+          "description": "PostgreSQL and MySQL schema helpers."
+        },
+        "1.0.1": {
+          "description": "Adds SQLite and migration diffing."
+        },
+        "1.0.2": {
+          "description": "Query plan analysis and index recommendations."
+        }
+      }
+    },
+    {
+      "name": "perf-profiler",
+      "description": "Runtime performance profiling, flamegraph visualization, and bottleneck detection",
+      "author": "claude-plugins-official",
+      "latest": "0.5.0",
+      "tags": ["performance", "profiling", "optimization"],
+      "versions": {
+        "0.4.0": {
+          "description": "Node.js and Python profiling support."
+        },
+        "0.5.0": {
+          "description": "Flamegraph generation and AI-driven optimization suggestions."
+        }
+      }
+    },
+    {
+      "name": "deploy-buddy",
+      "description": "One-command deployments to AWS, GCP, Azure, and Vercel with rollback support",
+      "author": "claude-plugins-official",
+      "latest": "1.3.0",
+      "tags": ["deployment", "cloud", "devops"],
+      "versions": {
+        "1.0.0": {
+          "description": "Vercel and Netlify deployments."
+        },
+        "1.2.0": {
+          "description": "AWS (Lambda, EC2, S3) and GCP (Cloud Run) support."
+        },
+        "1.3.0": {
+          "description": "Adds Azure and rollback/canary deployment strategies."
+        }
+      }
+    },
+    {
+      "name": "frontend-design",
+      "description": "AI-powered UI design assistant: component generation, Tailwind theming, and accessibility audits",
+      "author": "claude-plugins-official",
+      "latest": "1.0.0",
+      "tags": ["frontend", "ui", "design", "tailwind", "accessibility", "components"],
+      "versions": {
+        "1.0.0": {
+          "description": "Generate React/Vue/Svelte components from natural-language descriptions, apply Tailwind themes, and run WCAG accessibility audits.",
+          "activationNote": "Restart Claude Code to enable the frontend-design superpower."
+        }
+      }
+    }
+  ]
+}
